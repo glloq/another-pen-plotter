@@ -2,7 +2,29 @@
 
 ## Objectif
 
-Regrouper les choix techniques pour un pen plotter avec magasin pour changement outils/couleur automatique.
+Creer un pen plotter rapide et precis avec un magasin fixz pour changement outils/couleur automatique avec des pieces de recup d'imprimante 3D
+
+Après recherches il faut respecter plusieurs contraintes 
+
+## Precision et repetabilité:
+- Structure solide avec plateforme travail parallele avec les axes
+- amortissement des vibrations 
+- double fdc un optique et un mecanique NF sur x et y
+- routine de homming (optique) avabt et après chaque changement d'outils
+- systeme de centrage mine pour multicouleurs ?
+- mircro stepping 32 ou 64 pas
+- parametres outils adapté (vitesse max, acceleration min/max, force max, force min, etc )
+- Detection presence outils sur chariot X
+
+  
+## Securité :
+- Systeme de capots et reduction vitesse si capot ouvert
+- Arret d'urgence
+- Alimentation externe + Fusibles 12V (voiture) adapté
+- 
+  
+
+
 
 ## Structure mécanique
 
@@ -18,7 +40,6 @@ Regrouper les choix techniques pour un pen plotter avec magasin pour changement 
 ### Chariot X/Y
 
 - Cinématique en H-Bot 
-- Intégration d'un système de tension des courroies sur le chassit
 - Solénoïde pour l'abaissement de l'outil :
   - Course : 3 à 7 mm
   - Temps de réponse : < 100 ms
@@ -51,14 +72,10 @@ Regrouper les choix techniques pour un pen plotter avec magasin pour changement 
 - Mode démo automatique : enchaînement de tracés pour tests.
 - Éclairage LED RGB : visualiser les états (stylo actif, pause, erreur).
 - Caméra time-lapse intégrée.
-- Bras articulé pour essuyer la pointe entre changements de stylo.
 - ajout moteur axe derouleur papier 
 
 ## 🧩 STRUCTURE GÉNÉRALE
-### 📦 Montage modulaire
-
-Diviser la machine en blocs fonctionnels indépendants :
-- Bloc X/Y : mouvement H-Bot ou CoreXY
+- Bloc X/Y : mouvement H-Bot
 - Bloc Chariot : pince, solénoïde, capteur de présence
 - Bloc Magasin : support fixe de stylos/outils
 - Bloc Alimentation : transfo, ventilation, MOSFET
